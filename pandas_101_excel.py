@@ -22,7 +22,7 @@ print('\n')
 #Add how heavy they are
 cats_df['Weight'] = [10.0, 7.7, 5.8, 3.2, 5.8]
 
-print('Weight added:', cats_df)
+print('Weight added:\n', cats_df)
 print('\n')
 
 #count how many cats
@@ -35,9 +35,16 @@ avg = cats_df['Weight'].mean()
 print('Mean:', avg)
 print('\n')
 
+#max weight of the cats
+max_number = cats_df['Weight'].max()
+print('Max:', max_number)
+print('\n')
+
 #average weight of the cats by groups
 avg = cats_df.groupby('Cat').mean()
-print('Group Mean:', avg)
+print('Group Mean:\n', avg)
+print('\n')
 
-
-
+#average weight of the cats by groups
+g_count = cats_df.groupby('Cat')['Owner'].count()
+print('Group Count by Owner:\n', g_count)
