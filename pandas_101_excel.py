@@ -54,4 +54,9 @@ print('\n')
 g_count = cats_df.groupby('Cat')['Owner'].count()
 print('Group Count by Owner:\n', g_count)
 
+#average weight by category of cats
+g_mean = cats_df.groupby('Cat')['Weight'].mean()
+print('Group Average Weight of Cats by type:\n', g_mean)
+print('\n')
+
 
