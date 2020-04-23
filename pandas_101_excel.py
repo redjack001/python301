@@ -40,6 +40,11 @@ max_number = cats_df['Weight'].max()
 print('Max:', max_number)
 print('\n')
 
+#standard deviation weight of the cats by groups
+std = cats_df['Weight'].std()
+print('Standard Deviation:\n', std)
+print('\n')
+
 #average weight of the cats by groups
 avg = cats_df.groupby('Cat').mean()
 print('Group Mean:\n', avg)
@@ -48,3 +53,5 @@ print('\n')
 #average weight of the cats by groups
 g_count = cats_df.groupby('Cat')['Owner'].count()
 print('Group Count by Owner:\n', g_count)
+
+
